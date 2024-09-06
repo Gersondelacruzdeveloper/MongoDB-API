@@ -30,7 +30,7 @@ class ThreatListCreateView(generics.ListCreateAPIView):
     queryset = CyberThreat.objects.all()
     print('queryset', queryset)
     serializer_class = CyberThreatSerializer
-    permission_classes = [IsAuthenticated]  # Ensure only authenticated users can access
+    # permission_classes = [IsAuthenticated]  # Ensure only authenticated users can access
 
 # Retrieve, update, or delete a threat
 class ThreatDetailView(generics.RetrieveUpdateDestroyAPIView):

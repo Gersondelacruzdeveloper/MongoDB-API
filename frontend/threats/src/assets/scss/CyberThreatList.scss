@@ -1,61 +1,53 @@
 
 @import './variables';
-.container {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: $list-background-color;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  h2 {
-    color: $heading-color;
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-  
-  ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  li {
-    border-bottom: 1px solid $list-item-border-color;
-    padding: 15px;
-    transition: background-color 0.3s ease;
-  
-    &:last-child {
-      border-bottom: none;
-    }
-  
-    &:hover {
-      background-color: $list-item-hover-background-color;
-    }
-  }
-  
-  h3 {
-    margin: 0 0 10px 0;
-    font-size: 20px;
-    color: $heading-color;
-  }
-  
-  p {
-    margin: 5px 0;
-    font-size: 16px;
-  
-    strong {
-      font-weight: bold;
-    }
-  }
-  
-  a {
-    color: $link-color;
-    text-decoration: none;
-  
-    &:hover {
-      color: $link-hover-color;
-      text-decoration: underline;
-    }
-  }
+/* src/components/CyberThreatList.css */
+
+.cyber-threat-list {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.cyber-threat-list h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.cyber-threat-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.cyber-threat-list li {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.cyber-threat-list li:hover {
+  background-color: #f1f1f1;
+}
+
+.cyber-threat-list h3 {
+  margin: 0 0 10px;
+  font-size: 20px;
+  color: #333;
+}
+
+.cyber-threat-list p {
+  margin: 5px 0;
+  font-size: 16px;
+  color: #555;
+}
+
+.cyber-threat-list a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.cyber-threat-list a:hover {
+  text-decoration: underline;
+}

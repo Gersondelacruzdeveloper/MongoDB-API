@@ -6,8 +6,7 @@ import AddCyberThreat from '../compnents/CyberThreatList'
 const App: React.FC = () => {
     return (
         <div>
-            <h1>Cyber Threat Management System</h1>
-            <AddCyberThreat />
+            {/* <AddCyberThreat /> */}
             <CyberThreatList />
         </div>
     );

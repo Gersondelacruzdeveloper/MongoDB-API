@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { CyberThreat } from '../types';
 import { getCyberThreats } from '../api';
+import '../assets/scss/CyberThreatList.scss';
 
 const CyberThreatList: React.FC = () => {
     const [cyberThreats, setCyberThreats] = useState<CyberThreat[]>([]);
@@ -15,7 +16,7 @@ const CyberThreatList: React.FC = () => {
     }, []);
 
     return (
-        <div>
+        <div className="cyber-threat-list">
             <h2>Cyber Threats</h2>
             <ul>
                 {cyberThreats.map((threat) => (
