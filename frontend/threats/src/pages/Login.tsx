@@ -1,7 +1,6 @@
-// src/pages/Login.tsx
-
 import React, { useState } from 'react';
 import { login } from '../services/authService';
+import '../assets/scss/Login.scss'; 
 
 const Login = () => {
     const [username, setUsername] = useState('');
@@ -20,10 +19,10 @@ const Login = () => {
     };
 
     return (
-        <div>
+        <div className="login-container">
             <h2>Login</h2>
             <form onSubmit={handleSubmit}>
-                <div>
+                <div className="form-group">
                     <label>Username:</label>
                     <input
                         type="text"
@@ -32,7 +31,7 @@ const Login = () => {
                         required
                     />
                 </div>
-                <div>
+                <div className="form-group">
                     <label>Password:</label>
                     <input
                         type="password"
@@ -41,7 +40,7 @@ const Login = () => {
                         required
                     />
                 </div>
-                {error && <p style={{ color: 'red' }}>{error}</p>}
+                {error && <p className="error-message">{error}</p>}
                 <button type="submit">Login</button>
             </form>
         </div>
