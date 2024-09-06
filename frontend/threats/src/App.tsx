@@ -1,16 +1,17 @@
-// src/App.tsx
-import React from 'react';
-import CyberThreatList from './compnents/CyberThreatList';
-import AddCyberThreat from './compnents/CyberThreatList'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Login from './pages/Login';
+import Dashboard from './pages/dashboard'
 
-const App: React.FC = () => {
+function App() {
     return (
-        <div>
-            <h1>Cyber Threat Management System</h1>
-            <AddCyberThreat />
-            <CyberThreatList />
-        </div>
+        <Router>
+            <Routes>
+               <Route path="/" element={<Dashboard />} />
+                <Route path="/login" element={<Login />} />
+                {/* Other routes */}
+            </Routes>
+        </Router>
     );
-};
+}
 
 export default App;
