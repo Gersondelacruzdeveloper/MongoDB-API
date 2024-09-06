@@ -13,7 +13,7 @@ const Login = () => {
         try {
             await login(username, password);
             // Redirect user to another page or show success message
-            window.location.href = '/dashboard'; // For example, redirect to dashboard
+            window.location.href = '/'; // For example, redirect to dashboard
         } catch (err) {
             setError('Login failed. Please check your credentials.');
         }

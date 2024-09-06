@@ -9,28 +9,40 @@ export const login = async (username: string, password: string) => {
             password,
         });
 
-        const token = response.data.access; // JWT Token
-        const refreshToken = response.data.refresh; // Refresh token if needed
+        const token = response.data.access;
+        const refreshToken = response.data.refresh;
+        console.log('token', token)
 
-        // Store the token in localStorage or sessionStorage for persistence
-        localStorage.setItem('token', token);
-        localStorage.setItem('refreshToken', refreshToken);
+        // Check if token is correctly retrieved and stored
+        if (token) {
+            localStorage.setItem('token', token);
+            localStorage.setItem('refreshToken', refreshToken);
 
-        // Set token in Axios headers for future requests
-        axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+            // Set the token in the Axios default headers
+            axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
 
-        return response.data;
+            return response.data;
+        } else {
+            throw new Error('Token not provided');
+        }
 
     } catch (error) {
         console.error('Error during login', error);
-        throw error; // Optionally, you can handle error in the component
+        throw error;
     }
 };
 
-// Optional: Create a logout function
-export const logout = () => {
-    // Remove tokens from storage and headers
-    localStorage.removeItem('token');
-    localStorage.removeItem('refreshToken');
-    delete axios.defaults.headers.common['Authorization'];
+
+export const register = async (username: string, email: string, password: string) => {
+    try {
+        const response = await axios.post('http://localhost:8000/api/register/', {
+            username,
+            email,
+            password,
+        });
+        return response.data; // Return registration response
+    } catch (error) {
+        console.error('Error during registration', error);
+        throw error;
+    }
 };
