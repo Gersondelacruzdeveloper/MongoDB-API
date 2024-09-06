@@ -2,7 +2,7 @@
 import axios from 'axios';
 import { CyberThreat } from './types';
 
-const API_URL = 'http://localhost:8000/api/v1/threats/';
+const API_URL = 'http://localhost:8000/api/threats/';
 
 // Fetch all cyberthreats
 export const getCyberThreats = async (): Promise<CyberThreat[]> => {
