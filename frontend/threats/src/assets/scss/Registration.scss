@@ -1,0 +1,77 @@
+// src/assets/scss/Registration.module.scss
+
+@import './variables'; // Importing variables from the global SCSS file
+
+.registration-page {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: $padding;
+    background-color: white;
+    border-radius: $border-radius;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: $font-family;
+
+    h2 {
+        margin-bottom: 20px;
+        color: $primary-color;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        div {
+            width: 100%;
+            margin-bottom: 15px;
+            text-align: left;
+
+            label {
+                display: block;
+                margin-bottom: 5px;
+                font-weight: bold;
+                color: $text-color;
+            }
+
+            input {
+                width: 100%;
+                padding: 10px;
+                border: 1px solid $input-border-color;
+                border-radius: $border-radius;
+                font-size: 16px;
+                font-family: $font-family;
+                color: $text-color;
+
+                &:focus {
+                    border-color: $input-focus-color;
+                    outline: none;
+                    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+                }
+            }
+        }
+
+        .error {
+            color: $error-color;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: $primary-color;
+            color: white;
+            border: none;
+            border-radius: $border-radius;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+
+            &:hover {
+                background-color: $button-hover-color;
+            }
+        }
+    }
+}

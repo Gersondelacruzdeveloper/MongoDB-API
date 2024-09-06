@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { CyberThreat } from '../types';
 import { addCyberThreat } from '../api';
+import '../assets/scss/AddCyberThreat.scss';
 
 const AddCyberThreat: React.FC = () => {
     const [form, setForm] = useState<CyberThreat>({
